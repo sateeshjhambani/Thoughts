@@ -12,7 +12,6 @@
         <activity
             android:name="com.sateeshjh.thoughts.feature_note.presentation.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Thoughts">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
