@@ -1,4 +1,4 @@
-package com.sateeshjh.thoughts
+package com.sateeshjh.thoughts.feature_note.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
