@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.sateeshjh.thoughts.feature_note.data.data_source.NoteDatabase
 import com.sateeshjh.thoughts.feature_note.data.repository.NoteRepositoryImpl
 import com.sateeshjh.thoughts.feature_note.domain.repository.NoteRepository
+import com.sateeshjh.thoughts.feature_note.domain.use_case.AddNoteUseCase
 import com.sateeshjh.thoughts.feature_note.domain.use_case.DeleteNoteUseCase
 import com.sateeshjh.thoughts.feature_note.domain.use_case.GetNotesUseCase
 import com.sateeshjh.thoughts.feature_note.domain.use_case.NoteUseCases
@@ -39,7 +40,8 @@ object AppModule {
     fun provideNoteUseCases(repository: NoteRepository): NoteUseCases {
         return NoteUseCases(
             getNotesUseCase = GetNotesUseCase(repository),
-            deleteNoteUseCases = DeleteNoteUseCase(repository)
+            deleteNoteUseCases = DeleteNoteUseCase(repository),
+            addNoteUseCase = AddNoteUseCase(repository),
         )
     }
 }
