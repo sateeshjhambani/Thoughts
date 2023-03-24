@@ -65,6 +65,7 @@ fun NoteItem(
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .padding(16.dp)
                 .padding(end = 32.dp)
         ) {
             Text(
@@ -89,7 +90,8 @@ fun NoteItem(
         ) {
             Icon(
                 imageVector = Icons.Default.Delete,
-                contentDescription = "Delete Note"
+                contentDescription = "Delete Note",
+                tint = MaterialTheme.colors.onSurface
             )
         }
     }

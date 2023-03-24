@@ -1,5 +1,6 @@
 package com.sateeshjh.thoughts.feature_note.presentation
 
+import android.annotation.SuppressLint
 import androidx.compose.animation.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
@@ -29,6 +30,7 @@ import com.sateeshjh.thoughts.feature_note.presentation.add_edit_note.components
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun AddEditNoteScreen(
     navController: NavController,
@@ -76,7 +78,7 @@ fun AddEditNoteScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .background(noteBackgroundAnimatable.value)
-                .padding(it)
+                .padding(16.dp)
         ) {
             Row(
                 modifier = Modifier
